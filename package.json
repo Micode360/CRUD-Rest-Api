@@ -1,0 +1,22 @@
+{
+  "name": "crud-rest-api",
+  "version": "1.0.0",
+  "description": "An api that perform all crud operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miraking/CRUD-Rest-Api.git"
+  },
+  "author": "Niracle King Hesed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miraking/CRUD-Rest-Api/issues"
+  },
+  "homepage": "https://github.com/miraking/CRUD-Rest-Api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
