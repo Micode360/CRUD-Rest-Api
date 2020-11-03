@@ -3,7 +3,9 @@ let userModel = require('../model/user.model');
 
 
 
-/*READ*/
+
+
+
 router.route('/data').get((req,res)=>{
     userModel.find() 
     .then(data => res.json(data.map((i)=>{
@@ -17,7 +19,14 @@ router.route('/data').get((req,res)=>{
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
-/*ADD*/
+
+router.route('/:id').get((req,res) => {
+    userModel.findById(req.params.id)
+    .then(data => res.json(data))
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+
 router.route('/add').post((req,res)=>{
     const name = req.body.name;
     const description = req.body.description;
@@ -33,8 +42,8 @@ router.route('/add').post((req,res)=>{
 });
 
 
-/*UPDATE*/
-router.route('/update').post((req,res)=>{
+
+router.route('/update/:id').post((req,res)=>{
     userModel.findById(req.params.id)
     .then(data => {
         data.name = req.body.name;
@@ -49,12 +58,12 @@ router.route('/update').post((req,res)=>{
 });
 
 
-/*DELETE*/
-router.route((req,res)=>{
+
+router.route('/:id').delete((req,res)=>{
     userModel.findByIdAndDelete(req.params.id)
-    .then(()=>res.json('File has benn deleted'))
-    .catch(err => res.status(400).json('Error'+ err));
-});
+    .then(()=> res.json('user has been deleted'))
+    .catch(err=>res.status(400).json('Eror: '+err))
+})
 
 
 
