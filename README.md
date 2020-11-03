@@ -1,2 +1,2 @@
 # CRUD-Rest-Api
-An api where you can store perform all crud operations
+An api where you can perform all crud operations
