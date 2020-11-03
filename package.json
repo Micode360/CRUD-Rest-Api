@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/miraking/CRUD-Rest-Api/issues"
   },
-  "homepage": "https://github.com/miraking/CRUD-Rest-Api#readme",
+  "homepage": "https://miraking.github.io/CRUD-Rest-Api/",
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
